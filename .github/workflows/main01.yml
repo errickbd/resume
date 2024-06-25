@@ -14,7 +14,7 @@ jobs:
       - name: Create message.txt file
         run: echo "Hello, this is a message." > message.txt
       - name: Show message.txt contents
-        run: cat message.txt
+        run: echo message.txt
 
   print-working-directory:
     runs-on: ubuntu-latest
