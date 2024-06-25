@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print message.txt contents
-        run: cat message.txt
+        run: echo message.txt
 
   print-custom-message:
     runs-on: ubuntu-latest
