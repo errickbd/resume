@@ -1,0 +1,36 @@
+name: Example Workflow
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * 5'  # Run at midnight (00:00) every Friday
+
+jobs:
+  create-message-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create message.txt file
+        run: echo "Hello, this is a message." > message.txt
+      - name: Show message.txt contents
+        run: echo message.txt
+
+  print-working-directory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print current working directory
+        run: pwd
+
+  print-message-file-contents:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message.txt contents
+        run: echo message.txt
+
+  print-custom-message:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print custom message
+        run: echo "This is a custom message."
+
